@@ -28,8 +28,6 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr); 
   
 }
 
@@ -50,7 +48,7 @@
 
 #zeroBtn {
   grid-area: zeroBtn;
-  grid-column-start: 1 span 2;
+  grid-Column-start: 1 span 2;
 }
 
 #decimalBtn {

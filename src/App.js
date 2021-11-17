@@ -46,7 +46,7 @@ class App extends React.Component {
   reset = () => {
       this.setState({
       display: '0',
-      rV: [],
+      rV: 0,
       operation: "",
       });
   };
@@ -66,9 +66,10 @@ class App extends React.Component {
   }
 
   selectOperand = (operand) => {
+    const { display, rV, operation } = this.state;
     this.setState({
-      display:'0',
-      rV:Number(this.state.display),
+      display: 0,
+      rV: operation ? this[operation](Number(rV), Number(display)): Number(this.state.display),
       operation:operand,
     })
   }
