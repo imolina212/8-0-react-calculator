@@ -28,6 +28,9 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr); 
+  
 }
 
 .keypad div button {
@@ -40,8 +43,22 @@
   color: white;
 }
 
-.keypad div #zeroBtn {
-  grid-column: span 2;
+/* .keypad div .bottom-row{
+  grid-template-areas: 
+  'zeroBtn zeroBtn decimalBtn equalsBtn';
+} */
+
+#zeroBtn {
+  grid-area: zeroBtn;
+  grid-column-start: 1 span 2;
+}
+
+#decimalBtn {
+  grid-area: decimalBtn;
+}
+
+#equalsBtn {
+  grid-area: equalsBtn;
 }
 /* .bottom-row {
   display: grid;
